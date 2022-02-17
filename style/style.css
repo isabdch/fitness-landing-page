@@ -53,6 +53,11 @@ header .headerLogo {
 header .headerLogo a {
     text-decoration: none;
     color: #ffffff;
+    display: flex;
+}
+
+header .headerLogo a span {
+    color: #FFD60A;
 }
 
 header nav a {
@@ -77,7 +82,7 @@ header .hamburgerMenu {
     cursor: pointer;
 }
 
-section main .content {
+.mainSection main .content {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -90,52 +95,85 @@ section main .content {
     font-family: font;
 }
 
-section main .content span {
+.mainSection main .content span {
     margin: 10px;
     line-height: 30px;
 }
 
-section main .content #title {
+.mainSection main .content #title {
     font-family: titleFont;
     font-size: 1.5em;
     letter-spacing: 3px;
 }
 
-section main .content #subtitle {
+.mainSection main .content #subtitle {
     font-family: logoFont;
     font-size: 3em;
 }
 
-section main #startBtn {
+.mainSection main .content #startBtn {
     padding: 10px 50px;
-    margin: 20px;
-    transform: skew(-30deg);
+    background-color: #FFD60A;
+    box-shadow: 4px 4px 0px #ffffff;
+    transform: skewX(-30deg);
     -webkit-transform: skew(-30deg);
     -ms-transform: skew(-30deg);
-    border: none;
-    background-color: #FFD60A;
-    color: #000814;
-    box-shadow: 4px 4px 0px #ffffff;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
-section main #startBtn button {
+.mainSection main .content #startBtn button {
     border: none;
-    font-size: 1.1em;
     font-family: font;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #000814;
+    font-size: 1em;
     background-color: transparent;
-    transform: skew(30deg);
+    transform: skewX(30deg);
     -webkit-transform: skew(30deg);
-    -ms-transform: skew(30deg);
+    -ms-transform: skew(-30deg);
     cursor: pointer;
 }
 
-section main #startBtn:hover {
-    background-color: #ffe66a;
+.mainSection main .content #startBtn:hover {
+    box-shadow: none;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.mainSection main .content #startBtn:active {
+    background-color: #FFC300;
+}
+
+@media screen and (min-width: 2560px) {
+    .mainSection main .content {
+        max-width: 900px;
+        margin: 100px;
+        margin-top: 330px;
+    }
+
+    .mainSection main .content span {
+        margin: 20px;
+        line-height: 30px;
+    }
+
+    .mainSection main .content #title {
+        font-size: 3em;
+    }
+    
+    .mainSection main .content #subtitle {
+        font-size: 5em;
+    }
+
+    .mainSection main .content #text {
+        font-size: 2em;
+    }
+    
+    .mainSection main .content #startBtn {
+        padding: 15px 80px;
+    }
+    
+    .mainSection main .content #startBtn button {
+        font-size: 1.8em;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -149,6 +187,10 @@ section main #startBtn:hover {
 
     header nav a {
         font-size: 1.3vw;
+    }
+
+    .mainSection main .content #text {
+        font-size: 1.2em;
     }
 }
 
@@ -175,8 +217,34 @@ section main #startBtn:hover {
     }
 }
 
+@media screen and (max-width: 570px) {
+    .mainSection main .content {
+        margin-top: 170px;
+    }
+
+    .mainSection main .content #title {
+        font-size: 1em;
+    }
+    
+    .mainSection main .content #subtitle {
+        font-size: 2em;
+    }
+    
+    .mainSection main .content #startBtn {
+        padding: 5px 30px;
+    }
+    
+    .mainSection main .content #startBtn button {
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (max-width: 320px) {
     header {
-        padding: 10px;
+        padding: 30px;
+    }
+
+    .mainSection main .content {
+        margin-top: 130px;
     }
 }
