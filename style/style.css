@@ -494,7 +494,7 @@ header #showMenu {
     background-color: #00132e;
     color: #ffffff;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
 }
@@ -513,6 +513,12 @@ header #showMenu {
 #contact .contacts .imgs img {
     margin: 0px 5px;
     cursor: pointer;
+}
+
+#contact span {
+    font-family: logoFont;
+    font-size: 4em;
+    color: #FFD60A;
 }
 
 #contact .newsletter {
@@ -544,6 +550,10 @@ header #showMenu {
 
 #contact .newsletter button:active {
     background-color: #FFD60A;
+}
+
+#contact svg {
+    position: absolute;
 }
 
 #me {
@@ -651,6 +661,16 @@ header #showMenu {
 
     .mainSection {
         justify-content: center;
+    }
+
+    .fa-up {
+        font-size: 2em;
+        margin: 10px;
+    }
+
+    .fa-comment-dots {
+        font-size: 2em;
+        margin: 10px;
     }
 }
 
@@ -913,5 +933,15 @@ header #showMenu {
 
     #me {
         font-size: 1.2em;
+    }
+
+    .fa-up {
+        font-size: 5em;
+        margin: 30px;
+    }
+
+    .fa-comment-dots {
+        font-size: 5em;
+        margin: 30px;
     }
 }
