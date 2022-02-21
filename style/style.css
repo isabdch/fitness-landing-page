@@ -83,11 +83,11 @@ header .headerLogo a span {
 }
 
 header nav a {
-    margin: 0px 30px;
+    margin: 0px 60px;
     text-decoration: none;
     color: #ffffff;
     transition: 0.4s;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 header nav a:hover {
@@ -286,7 +286,7 @@ header .hamburgerMenu {
 #plansSection .plans li {
     list-style: none;
     margin-left: -30px;
-    margin-top: 1px;
+    margin-top: 5px;
     margin-right: 10px;
     font-weight: 100;
 }
@@ -328,28 +328,27 @@ header .hamburgerMenu {
     flex-direction: column;
     align-items: center;
     margin-top: -10px;
+    margin-bottom: 25px;
 }
 
 #aboutUsSection #aboutUsTitle {
-    margin-top: 45px;
+    margin-top: 70px;
     font-weight: 500;
     letter-spacing: 3px;
     text-align: center;
     font-size: 2em;
     padding: 10px;
-    width: 100%;
-}
-
-#aboutUsSection hr {
-    width: 100px;
-    border: 1px solid #ffffff;
+    width: 200px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
 }
 
 #aboutUsSection .textAndImg {
     padding: 20px;
     width: 90%;
     height: 100%;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
 }
@@ -383,6 +382,65 @@ header .hamburgerMenu {
     border-bottom-left-radius: 30px;
 }
 
+#findUsSection {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000814;
+    background-image: url("../images/wallpaper3.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 700px;
+    margin-top: -40px;
+}
+
+#findUsSection #findUsTitle {
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+    width: 200px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+#findUsSection .mapAddress {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+#findUsSection .mapAddress div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.7em;
+}
+
+#findUsSection .mapAddress div i {
+    font-size: 1.7em;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    color: #FFC300;
+}
+
+#findUsSection .mapAddress div p:first-of-type {
+    font-size: 0.65em;
+    margin-bottom: 15px;
+}
+
+#findUsSection .mapAddress iframe {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0px #FFD60A;
+}
+
 @-moz-document url-prefix() {
     * {
         scrollbar-width: thin;
@@ -391,6 +449,7 @@ header .hamburgerMenu {
 }
 
 @media screen and (max-width: 639px) {
+
     #plansSection .plans #basicPlan,
     #plansSection .plans #standardPlan,
     #plansSection .plans #premiumPlan {
@@ -444,6 +503,27 @@ header .hamburgerMenu {
         width: 80%;
         margin-left: 20px;
     }
+
+    #findUsSection .mapAddress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #findUsSection .mapAddress div {
+        text-align: center;
+    }
+
+    #findUsSection .mapAddress div i {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+    #findUsSection .mapAddress iframe {
+        width: 90%;
+        height: 300px;
+        margin-top: 30px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -457,11 +537,6 @@ header .hamburgerMenu {
 
     .mainSection main .content #startBtn button {
         font-size: 1.2em;
-    }
-
-    #aboutUsSection hr {
-        width: 100px;
-        border: 1px solid #ffffff;
     }
 
     #aboutUsSection .textAndImg .aboutUsText p {
@@ -582,10 +657,6 @@ header .hamburgerMenu {
 
     #aboutUsSection #aboutUsTitle {
         font-size: 3em;
-    }
-
-    #aboutUsSection hr {
-        width: 150px;
     }
 
     #aboutUsSection .textAndImg {
