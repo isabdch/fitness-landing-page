@@ -1,3 +1,27 @@
+@keyframes show {
+    from {
+        right: -100px;
+        opacity: 0;
+    }
+
+    to {
+        right: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    from {
+        right: 10px;
+        opacity: 1;
+    }
+
+    to {
+        right: -100px;
+        opacity: 0;
+    }
+}
+
 @font-face {
     font-family: logoFont;
     src: url("./font/Aquire-BW0ox.otf");
@@ -29,11 +53,11 @@ html {
 }
 
 *::-webkit-scrollbar-track {
-    background-color: #8b8b8b;
+    background-color: #c9c9c9;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #c9c9c9;
+    background-color: #8b8b8b;
 }
 
 body {
@@ -59,7 +83,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid white; */
+    position: relative;
 }
 
 header .headerLogo {
@@ -82,8 +106,13 @@ header .headerLogo a span {
     color: #FFD60A;
 }
 
+header nav {
+    position: absolute;
+    right: 30px;
+}
+
 header nav a {
-    margin: 0px 60px;
+    margin: 0px 30px;
     text-decoration: none;
     color: #ffffff;
     transition: 0.4s;
@@ -96,16 +125,27 @@ header nav a:hover {
 
 header .hamburgerMenu {
     display: none;
+    position: absolute;
     color: #ffffff;
     background-color: transparent;
     border: none;
     font-size: 1em;
-    margin-right: 10px;
+    right: 0;
+    margin-right: 40px;
     cursor: pointer;
 }
 
+header #showMenu {
+    display: none;
+    position: absolute;
+    height: 400px;
+    width: 150px;
+    background-color: #c4c4c4c0;
+    top: 10px;
+    right: 10px;
+}
+
 .mainSection {
-    /* border: 1px solid white; */
     height: 520px;
     padding-left: 2vw;
     display: flex;
@@ -184,7 +224,6 @@ header .hamburgerMenu {
 #plansSection {
     color: #ffffff;
     background-color: #000814;
-    /* border: 1px solid white; */
     width: 100%;
     min-height: 540px;
     display: flex;
@@ -327,8 +366,7 @@ header .hamburgerMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -10px;
-    margin-bottom: 25px;
+    justify-content: center;
 }
 
 #aboutUsSection #aboutUsTitle {
@@ -340,7 +378,6 @@ header .hamburgerMenu {
     padding: 10px;
     width: 200px;
     border-top: 2px solid;
-    border-bottom: 2px solid;
 }
 
 #aboutUsSection .textAndImg {
@@ -348,17 +385,21 @@ header .hamburgerMenu {
     width: 90%;
     height: 100%;
     margin-top: 40px;
-    margin-bottom: 60px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #aboutUsSection .textAndImg .aboutUsText {
-    width: 50%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 #aboutUsSection .textAndImg .aboutUsText p {
-    font-size: 1.06em;
+    font-size: 1.22em;
     margin-bottom: 10px;
 }
 
@@ -404,15 +445,15 @@ header .hamburgerMenu {
     padding: 10px;
     width: 200px;
     border-top: 2px solid;
-    border-bottom: 2px solid;
+    margin-top: 80px;
 }
 
 #findUsSection .mapAddress {
     width: 100%;
     display: flex;
-    position: relative;
     justify-content: space-around;
-    margin-top: 60px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 #findUsSection .mapAddress div {
@@ -420,18 +461,24 @@ header .hamburgerMenu {
     flex-direction: column;
     justify-content: center;
     font-size: 1.7em;
+    margin-top: -80px;
+    margin-left: 30px;
 }
 
 #findUsSection .mapAddress div i {
     font-size: 1.7em;
-    margin-top: -60px;
     margin-bottom: 10px;
     margin-left: 15px;
-    color: #FFC300;
+    color: #FFD60A;
 }
 
 #findUsSection .mapAddress div p:first-of-type {
-    font-size: 0.65em;
+    font-size: 0.7em;
+    margin-bottom: 15px;
+}
+
+#findUsSection .mapAddress div p:last-of-type {
+    font-size: 0.7em;
     margin-bottom: 15px;
 }
 
@@ -439,6 +486,114 @@ header .hamburgerMenu {
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 5px 5px 0px #FFD60A;
+}
+
+#contact {
+    width: 100%;
+    min-height: 150px;
+    background-color: #00132e;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+#contact .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact .contacts p {
+    font-size: 1.3em;
+}
+
+#contact .contacts .imgs img {
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+#contact .newsletter {
+    font-size: 1.3em;
+}
+
+#contact .newsletter input {
+    padding: 7px 12px;
+    margin-top: 10px;
+    font-size: 0.7em;
+    outline: none;
+    border: none;
+}
+
+#contact .newsletter button {
+    padding: 7px 15px;
+    font-size: 0.7em;
+    font-weight: 600;
+    border: none;
+    background-color: #FFD60A;
+    color: #000814;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#contact .newsletter button:hover {
+    background-color: #FFC300;
+}
+
+#contact .newsletter button:active {
+    background-color: #FFD60A;
+}
+
+#me {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffffad;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+}
+
+#me a {
+    text-decoration: none;
+    color: #ffffffad;
+    transition: 0.2s;
+}
+
+#me a:hover {
+    color: #ffffff;
+}
+
+.fa-up {
+    opacity: 0;
+    position: fixed;
+    color: #ffffffad;
+    bottom: 0;
+    left: 0;
+    margin: 20px 25px;
+    font-size: 2.8em;
+    transition: 0.2s;
+}
+
+.fa-up:hover {
+    color: #ffffff;
+}
+
+.fa-comment-dots {
+    position: fixed;
+    color: #FFD60A;
+    bottom: 0;
+    right: 0;
+    margin: 20px 25px;
+    font-size: 3em;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fa-comment-dots:hover {
+    transform: scale(1.1);
 }
 
 @-moz-document url-prefix() {
@@ -456,6 +611,15 @@ header .hamburgerMenu {
         border-radius: 30px;
 
     }
+
+    #contact {
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        padding-bottom: 60px;
+    }
 }
 
 @media screen and (max-width: 710px) {
@@ -468,13 +632,17 @@ header .hamburgerMenu {
 
     header nav {
         display: none;
-        margin-top: 220px;
+        margin-top: 300px;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
     }
 
     header nav a {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
+        text-align: right;
+        margin-top: 50px;
     }
 
     header .hamburgerMenu {
@@ -512,13 +680,14 @@ header .hamburgerMenu {
 
     #findUsSection .mapAddress div {
         text-align: center;
+        margin-top: 0px;
+        margin-left: 0px;
     }
 
     #findUsSection .mapAddress div i {
         margin-left: 0px;
-        margin-top: 10px;
     }
-    
+
     #findUsSection .mapAddress iframe {
         width: 90%;
         height: 300px;
@@ -609,7 +778,7 @@ header .hamburgerMenu {
     }
 
     #plansSection .plans {
-        margin-top: 20px;
+        margin-top: 90px;
         gap: 40px;
     }
 
@@ -653,10 +822,11 @@ header .hamburgerMenu {
 
     #plansSection .plans .purchasePlan {
         font-size: 1.6em;
+        margin-bottom: 35px;
     }
 
-    #aboutUsSection #aboutUsTitle {
-        font-size: 3em;
+    #aboutUsSection {
+        margin-top: 90px;
     }
 
     #aboutUsSection .textAndImg {
@@ -673,5 +843,75 @@ header .hamburgerMenu {
         box-shadow: -10px 10px 0px #FFD60A;
         border-top-right-radius: 30px;
         border-bottom-left-radius: 30px;
+    }
+
+    #findUsSection {
+        min-height: 800px;
+        background-size: 1200px;
+        margin-top: 50px;
+    }
+
+    #findUsSection .mapAddress {
+        margin-top: 80px;
+    }
+
+    #findUsSection .mapAddress div {
+        font-size: 2.6em;
+    }
+
+    #findUsSection .mapAddress div i {
+        margin-bottom: 15px;
+    }
+
+    #findUsSection .mapAddress div p:first-of-type {
+        font-size: 0.8em;
+    }
+
+    #findUsSection .mapAddress iframe {
+        height: 530px;
+        width: 750px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 10px 10px 0px #FFD60A;
+    }
+
+    #contact {
+        min-height: 250px;
+    }
+
+    #contact .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #contact .contacts p {
+        font-size: 2.3em;
+    }
+
+    #contact .contacts .imgs img {
+        margin: 10px;
+        height: 60px;
+        cursor: pointer;
+    }
+
+    #contact .newsletter {
+        font-size: 2.3em;
+    }
+
+    #contact .newsletter input {
+        padding: 12px 21px;
+        margin-top: 20px;
+        font-size: 0.8em;
+    }
+
+    #contact .newsletter button {
+        padding: 12px 25px;
+        font-size: 0.8em;
+    }
+
+    #me {
+        font-size: 1.2em;
     }
 }
