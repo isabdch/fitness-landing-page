@@ -33,7 +33,7 @@ function showNavBar() {
 function scrollPage() {
   if (window.scrollY == 0) {
     arrowUp.style.opacity = 0;
-    arrowUp.style.cursor = "none";
+    arrowUp.style.cursor = "initial";
   } else {
     arrowUp.style.opacity = 1;
     arrowUp.style.cursor = "pointer";
