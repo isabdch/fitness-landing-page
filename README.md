@@ -8,12 +8,14 @@
 ![](https://img.shields.io/github/license/isabdch/fitness-landing-page?color=%23FFD60A&style=for-the-badge)
 
 ## [SITE HERE](https://isabdch.github.io/fitness-landing-page/)
-![](images/screenshot.png)
+![](/github/gif-readme.gif)
 
 ## 📖 Table of Contents
 
 - [Project Description](#project-description)
 - [Status](#status)
+
+<br />
 
 ## ✏️ Project Description
 
@@ -25,6 +27,12 @@ This is a fitness landing page project I created to practice my skills in CSS. I
   
 - ### JavaScript
 
+<br />
+
 ## ⏱️ Status
 
 This project is finished.
+
+---
+
+Made with 💜 by Isabelle Brandão 👋 [See my LinkedIn](https://www.linkedin.com/in/isabelle-brand%C3%A3o-5645551a8/)
